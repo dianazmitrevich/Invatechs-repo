@@ -1,0 +1,45 @@
+.industries-list__item {
+    width: 329px;
+    height: 586px;
+    overflow: hidden;
+    margin-right: 5px;
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+        }
+    }
+
+    picture {
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+.industries-list__items-slider {
+    .slider__arrow {
+        content: '';
+        background-image: url('../../img/industries__slider-arrow.svg');
+        width: 30px;
+        height: 46px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 99;
+    }
+
+    .slider__arrow-left {
+        transform: rotate(180deg);
+        left: 30px;
+    }
+
+    .slider__arrow-right {
+        right: 30px;
+    }
+}

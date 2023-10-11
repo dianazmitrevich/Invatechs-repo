@@ -1,0 +1,152 @@
+.technologies-list__wrapper {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-between
+}
+
+.technologies-list__col-texts {
+    width: 500px;
+}
+
+.technologies-list__title {
+    margin-bottom: 80px;
+}
+
+.technologies-list__slider {
+    .slider__dots {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+
+        li {
+            list-style: none;
+            position: relative;
+            width: 8px;
+            margin-right: 12px;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: #DBDBDB;
+            }
+        }
+
+        li.slick-active {
+            &::before {
+                background: $dark-main-color;
+            }
+        }
+
+        button {
+            display: none;
+        }
+    }
+
+    .item__title {
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 140%;
+        color: $accent-color;
+        margin-bottom: 40px;
+    }
+
+    .item__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+
+        .cards__item {
+            width: calc(50% - 40px);
+            display: flex;
+            align-items: center;
+            margin-bottom: 45px;
+        }
+
+        .cards__item-img {
+            width: 45px;
+            height: 45px;
+            margin-right: 15px;
+
+            picture {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    height: 100%;
+                    width: auto;
+                }
+            }
+        }
+
+        .cards__item-text {
+            font-size: 2.4rem;
+        }
+    }
+}
+
+.technologies-list__col-cta {
+    position: relative;
+}
+
+.technologies-list__col-image {
+    width: 522px;
+    height: 608px;
+    overflow: hidden;
+
+    picture {
+        width: 100%;
+        height: 100%;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+}
+
+.technologies-list__col-btn {
+    width: 241px;
+    height: 241px;
+    border-radius: 50%;
+    background: $accent-color;
+    font-size: 3rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -50px;
+    left: -120px;
+
+    span {
+        position: relative;
+        padding-right: 55px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            background-image: url('../../img/technologies__arrow_right.svg');
+            width: 40px;
+            height: 20px;
+        }
+    }
+}

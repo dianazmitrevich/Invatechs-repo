@@ -1,0 +1,24 @@
+.customers-list {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .slider__item {
+        width: 227px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        picture {
+            width: 127px;
+            height: 127px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

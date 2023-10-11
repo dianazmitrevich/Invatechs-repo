@@ -1,0 +1,20 @@
+.main-services {
+    .services__cards {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cards__item {
+        max-width: 230px;
+    }
+
+    .card__title {
+        margin-bottom: 15px;
+    }
+
+    .card__text {
+        font-size: 1.7rem;
+        color: $lighter-text-color;
+        line-height: 140%;
+    }
+}

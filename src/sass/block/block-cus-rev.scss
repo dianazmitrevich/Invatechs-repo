@@ -1,0 +1,118 @@
+.customers-reviews__wrapper {
+    padding-top: 140px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.customers-reviews__col-clutch {
+    max-width: 520px;
+}
+
+.customers-reviews__clutch {
+    iframe {
+        border: none;
+    }
+}
+
+.customers-reviews__title {
+    margin-bottom: 60px;
+}
+
+.customers-reviews__col-slider {
+    max-width: 560px;
+}
+
+.customers-reviews__slider {
+    position: relative;
+
+    .slider__dots {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+
+        li {
+            list-style: none;
+            position: relative;
+            width: 8px;
+            margin-right: 12px;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: #DBDBDB;
+            }
+        }
+
+        li.slick-active {
+            &::before {
+                background: $dark-main-color;
+            }
+        }
+
+        button {
+            display: none;
+        }
+    }
+
+    .item__text {
+        font-size: 1.9rem;
+        line-height: 130%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .item__author {
+        display: flex;
+        align-items: center;
+        margin-bottom: 60px;
+
+        .item__author-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 25px;
+
+            picture {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .item__author-name {
+            .name {
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 22px;
+                font-weight: 400;
+                letter-spacing: 0.22px;
+                margin-bottom: 9px;
+            }
+
+            .position {
+                color: #757575;
+                font-size: 18px;
+                font-weight: 400;
+                letter-spacing: 0.18px;
+            }
+        }
+    }
+}
