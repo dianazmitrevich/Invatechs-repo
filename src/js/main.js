@@ -34,6 +34,7 @@ function centerImagesCaseStudies() {
 
     innerBlocks.forEach((innerBlock, index) => {
         let windowHeight = $(window).height();
+        let windowWidth = $(window).width();
 
         const fixedHeight = (windowHeight - innerBlock.clientHeight) / 2;
 
@@ -42,7 +43,10 @@ function centerImagesCaseStudies() {
         var innerBlockTop = 0;
 
         if (index > 0) {
-            innerBlockTop = fixedHeight - parentBlockRect.top - index * 900;
+            if (windowWidth < 1140) {
+                innerBlockTop = fixedHeight - parentBlockRect.top - index * 850;
+            } else
+                innerBlockTop = fixedHeight - parentBlockRect.top - index * 900;
         }
         else {
             innerBlockTop = fixedHeight - parentBlockRect.top;

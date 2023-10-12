@@ -2,7 +2,12 @@
     padding-top: 150px;
     padding-bottom: 100px;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+
+    @include l-tablet {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
 }
 
 .technologies-list__col-texts {
@@ -11,6 +16,10 @@
 
 .technologies-list__title {
     margin-bottom: 80px;
+
+    @include l-tablet {
+        margin-bottom: 40px;
+    }
 }
 
 .technologies-list__slider {
@@ -72,6 +81,10 @@
             display: flex;
             align-items: center;
             margin-bottom: 45px;
+
+            @include l-tablet {
+                margin-bottom: 30px;
+            }
         }
 
         .cards__item-img {
@@ -117,6 +130,10 @@
             width: auto;
         }
     }
+
+    @include l-tablet {
+        display: none;
+    }
 }
 
 .technologies-list__col-btn {
@@ -133,6 +150,13 @@
     position: absolute;
     bottom: -50px;
     left: -120px;
+
+    @include l-tablet {
+        bottom: unset;
+        top: 0;
+        left: unset;
+        right: -20px;
+    }
 
     span {
         position: relative;

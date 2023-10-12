@@ -1,8 +1,14 @@
 .industries-list__item {
     width: 329px;
     height: 586px;
+    aspect-ratio: 329/586;
     overflow: hidden;
     margin-right: 5px;
+
+    @include l-tablet {
+        height: 400px !important;
+        width: auto;
+    }
 
     &:hover {
         img {

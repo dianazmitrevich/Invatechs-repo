@@ -21,6 +21,12 @@
         font-size: 20px;
         font-weight: 700;
 
+        @include l-tablet {
+            left: unset;
+            transform: unset;
+            right: calc((100% - 760px) / 2);
+        }
+
         picture {
             margin-top: 15px;
             margin-bottom: -15px;
@@ -31,6 +37,10 @@
         height: 900px;
         padding: 0;
         overflow: hidden;
+
+        @include l-tablet {
+            height: 850px;
+        }
 
         &:nth-of-type(1) {
             &:before {
@@ -75,6 +85,11 @@
         @include desktop {
             margin-left: -100px;
         }
+
+        @include l-tablet {
+            margin-left: 0;
+            margin-bottom: 40px;
+        }
     }
 
     .item__info {
@@ -83,6 +98,11 @@
 
         @include desktop {
             margin-left: 100px;
+        }
+
+        @include l-tablet {
+            margin-left: 0;
+            max-width: 360px;
         }
     }
 
@@ -139,11 +159,19 @@
             width: 400px;
         }
 
+        @include l-tablet {
+            width: 290px;
+        }
+
         .image-wrap {
             position: relative;
             height: 1000px;
             width: auto;
             aspect-ratio: 616/1080;
+
+            @include l-tablet {
+                height: 700px;
+            }
 
             picture {
                 height: 100%;

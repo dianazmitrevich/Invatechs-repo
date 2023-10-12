@@ -2,10 +2,24 @@
     .services__cards {
         display: flex;
         justify-content: space-between;
+
+        @include l-tablet {
+            flex-wrap: wrap;
+        }
     }
 
     .cards__item {
         max-width: 230px;
+
+        @include l-tablet {
+            max-width: calc(50% - 30px);
+            margin-bottom: 30px;
+
+            &:nth-of-type(3),
+            &:nth-of-type(4) {
+                margin-bottom: 0;
+            }
+        }
     }
 
     .card__title {

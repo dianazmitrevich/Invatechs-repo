@@ -8,6 +8,10 @@
         align-items: center;
         justify-content: center;
 
+        @include l-tablet {
+            width: 150px;
+        }
+
         picture {
             width: 127px;
             height: 127px;
@@ -15,9 +19,17 @@
             align-items: center;
             justify-content: center;
 
+            @include l-tablet {
+                width: 80px;
+                height: 80px;
+            }
+
             img {
                 width: 100%;
                 height: auto;
+                margin-left: 50px;
+
+                @include l-tablet {}
             }
         }
     }

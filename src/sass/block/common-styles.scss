@@ -3,6 +3,10 @@
     color: $light-main-color;
     padding: 120px 0;
 
+    @include l-tablet {
+        padding: 80px 0;
+    }
+
     .title-wrap {
         margin-bottom: 50px;
     }
@@ -36,5 +40,9 @@
         font-weight: 700;
         font-family: 'Ubuntu', sans-serif;
         opacity: .04;
+
+        @include l-tablet {
+            font-size: 120px;
+        }
     }
 }

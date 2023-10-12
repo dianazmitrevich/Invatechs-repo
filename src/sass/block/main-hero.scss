@@ -12,6 +12,10 @@
     overflow: hidden;
     z-index: -100;
 
+    @include l-tablet {
+        height: 60vh;
+    }
+
     video {
         position: absolute;
         width: 100%;

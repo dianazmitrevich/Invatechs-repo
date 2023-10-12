@@ -18,6 +18,10 @@
     width: 100%;
     padding-left: 80px;
     padding-right: 80px;
+
+    @include l-tablet {
+        display: none;
+    }
 }
 
 .header__row {

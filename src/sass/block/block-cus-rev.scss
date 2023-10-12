@@ -3,6 +3,11 @@
     padding-bottom: 80px;
     display: flex;
     justify-content: space-between;
+
+    @include l-tablet {
+        padding-top: 50px;
+        flex-direction: column;
+    }
 }
 
 .customers-reviews__col-clutch {
@@ -11,20 +16,34 @@
     @include desktop {
         max-width: 400px;
     }
+
+    @include l-tablet {
+        max-width: 100%;
+    }
 }
 
 .customers-reviews__clutch {
     iframe {
         border: none;
+        height: 80px;
     }
 }
 
 .customers-reviews__title {
     margin-bottom: 60px;
+
+    @include l-tablet {
+        margin-bottom: 40px;
+    }
 }
 
 .customers-reviews__col-slider {
     max-width: 560px;
+
+    @include l-tablet {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .customers-reviews__slider {

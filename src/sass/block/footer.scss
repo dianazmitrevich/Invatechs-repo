@@ -12,20 +12,57 @@
     display: flex;
     justify-content: space-between;
 
+    @include l-tablet {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
     &:first-of-type {
         border-bottom: 1px solid #525252;
         padding-bottom: 20px;
         margin-bottom: 20px;
+
+        @include l-tablet {
+            padding-bottom: 0;
+        }
     }
 }
 
 .footer__col {
     width: fit-content;
+
+    @include l-tablet {
+        margin-bottom: 40px;
+        margin-right: 60px;
+    }
 }
 
 .footer__col-main {
     display: flex;
     flex-direction: column;
+
+    @include l-tablet {
+        order: 1;
+    }
+}
+
+.footer__col-contacts {
+    @include l-tablet {
+        min-width: 50%;
+        order: 4;
+    }
+}
+
+.footer__col-development {
+    @include l-tablet {
+        order: 2;
+    }
+}
+
+.footer__col-about {
+    @include l-tablet {
+        order: 3;
+    }
 }
 
 .footer__col-cta {
@@ -34,6 +71,10 @@
         font-size: 26px;
         margin-top: 47px;
         margin-bottom: 24px;
+    }
+
+    .cta__btn {
+        white-space: nowrap;
     }
 }
 

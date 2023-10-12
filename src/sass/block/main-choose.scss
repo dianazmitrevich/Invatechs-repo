@@ -5,14 +5,8 @@
 
     &:before {
         content: 'Quick facts';
-        position: absolute;
-        text-transform: uppercase;
         left: 0;
         bottom: -40px;
-        font-size: 170px;
-        font-weight: 700;
-        font-family: 'Ubuntu', sans-serif;
-        opacity: .04;
     }
 
     &:after {
@@ -36,6 +30,12 @@
         padding-bottom: 130px;
         display: flex;
         justify-content: space-between;
+
+        @include l-tablet {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            flex-direction: column;
+        }
     }
 
     .choose__col-text {
@@ -44,6 +44,10 @@
 
         p {
             margin-bottom: 15px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -60,8 +64,18 @@
             margin-right: 0;
         }
 
+        @include l-tablet {
+            margin-top: 40px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
         .numbers__item {
             margin-bottom: 40px;
+
+            @include l-tablet {
+                margin-bottom: 0;
+            }
         }
 
         .numbers__item-num {

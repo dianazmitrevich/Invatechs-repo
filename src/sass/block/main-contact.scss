@@ -2,6 +2,11 @@
     width: 100%;
     height: 1000px;
     position: relative;
+    overflow: hidden;
+
+    @include l-tablet {
+        height: 900px;
+    }
 
     &:before {
         content: 'Contact us';
@@ -35,6 +40,13 @@
             margin-right: calc((100% - 1100px) / 2);
         }
 
+        @include l-tablet {
+            margin-left: calc((100% - 760px) / 2);
+            margin-right: calc((100% - 760px) / 2);
+
+            padding-bottom: 80px;
+        }
+
         &:before {
             position: absolute;
             content: '';
@@ -59,6 +71,10 @@
         line-height: 140%;
         max-width: 530px;
         margin-bottom: 90px;
+
+        @include l-tablet {
+            margin-bottom: 60px;
+        }
     }
 
     .contact__form {
