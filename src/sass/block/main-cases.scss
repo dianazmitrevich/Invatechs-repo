@@ -18,7 +18,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        font-size: 2rem;
+        font-size: 20px;
         font-weight: 700;
 
         picture {
@@ -71,11 +71,19 @@
     .cases__title {
         margin-bottom: 80px;
         margin-left: -150px;
+
+        @include desktop {
+            margin-left: -100px;
+        }
     }
 
     .item__info {
         margin-left: 150px;
         max-width: 420px;
+
+        @include desktop {
+            margin-left: 100px;
+        }
     }
 
     .item__subtitle {
@@ -87,7 +95,7 @@
     }
 
     .item__text {
-        font-size: 1.8rem;
+        font-size: 18px;
         line-height: 140%;
         margin-bottom: 40px;
         color: $light-main-color;
@@ -105,7 +113,7 @@
 
         .tags__item {
             color: #B5B5B5;
-            font-size: 1.6rem;
+            font-size: 16px;
             padding: 8px 14px;
             border: 2px solid #B5B5B5;
             margin-right: 14px;
@@ -126,6 +134,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include desktop {
+            width: 400px;
+        }
 
         .image-wrap {
             position: relative;

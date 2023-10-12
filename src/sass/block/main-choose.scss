@@ -25,6 +25,10 @@
         background-position: right;
         right: 0;
         top: 0;
+
+        @include desktop {
+            content: unset;
+        }
     }
 
     .choose__wrapper {
@@ -36,7 +40,7 @@
 
     .choose__col-text {
         max-width: 620px;
-        font-size: 1.8rem;
+        font-size: 18px;
 
         p {
             margin-bottom: 15px;
@@ -52,6 +56,10 @@
         flex-direction: column;
         margin-right: 230px;
 
+        @include desktop {
+            margin-right: 0;
+        }
+
         .numbers__item {
             margin-bottom: 40px;
         }
@@ -64,7 +72,7 @@
         }
 
         .numbers__item-text {
-            font-size: 2.4rem;
+            font-size: 24px;
             letter-spacing: 0.24px;
         }
     }

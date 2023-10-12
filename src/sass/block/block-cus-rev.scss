@@ -7,6 +7,10 @@
 
 .customers-reviews__col-clutch {
     max-width: 520px;
+
+    @include desktop {
+        max-width: 400px;
+    }
 }
 
 .customers-reviews__clutch {
@@ -25,6 +29,16 @@
 
 .customers-reviews__slider {
     position: relative;
+
+    &:before {
+        position: absolute;
+        content: '';
+        background-image: url('../img/review-quotes.png');
+        width: 144px;
+        height: 128px;
+        top: -30px;
+        left: -40px;
+    }
 
     .slider__dots {
         display: flex;
@@ -66,7 +80,7 @@
     }
 
     .item__text {
-        font-size: 1.9rem;
+        font-size: 19px;
         line-height: 130%;
         margin-top: 30px;
         margin-bottom: 30px;

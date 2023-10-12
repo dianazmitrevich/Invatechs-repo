@@ -23,13 +23,13 @@ $lighter-text-color: #949494;
 }
 
 @mixin l-tablet {
-   @media (max-width: 991px) {
+   @media (max-width: 1139px) {
       @content;
    }
 }
 
 @mixin desktop {
-   @media (max-width: 1439px) {
+   @media (max-width: 1479px) {
       @content;
    }
 }
@@ -44,6 +44,14 @@ html {
    font-size: $base-font-size;
    line-height: $base-line-height;
    scroll-behavior: smooth;
+
+   @include l-tablet {
+      font-size: 8px;
+   }
+
+   @include sm-tablet {
+      font-size: 6px;
+   }
 }
 
 // ::-webkit-scrollbar {
@@ -63,10 +71,6 @@ body {
    overflow-x: hidden;
    overflow-y: scroll;
    color: $dark-main-color;
-}
-
-main {
-   // padding-top: 90px;
 }
 
 .container {
@@ -205,14 +209,14 @@ a {
 .main-btn {
    padding: 10px 70px;
    background: $accent-color;
-   font-size: 2rem;
+   font-size: 20px;
    line-height: 200%;
    color: $dark-main-color;
    width: fit-content;
 }
 
 .main-cta {
-   font-size: 1.9rem;
+   font-size: 19px;
    line-height: 200%;
    padding-right: 40px;
    position: relative;
@@ -231,7 +235,7 @@ a {
 }
 
 .main-arr-btn {
-   font-size: 1.8rem;
+   font-size: 18px;
    padding: 14px 30px;
    padding-right: 64px;
    background: $accent-color;
