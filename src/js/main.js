@@ -55,19 +55,6 @@ function centerImagesCaseStudies() {
         innerBlock.style.position = 'absolute';
         innerBlock.style.top = `${innerBlockTop}px`;
     });
-
-    // const innerBlock = document.querySelector('.main-cases .item__image .image-wrap');
-    // const parentBlock = document.querySelector('.main-cases .item__image');
-    // const fixedHeight = 100; 
-    // Здесь указываем желаемую фиксированную высоту в пикселях
-
-    // Вычисляем позицию внутреннего блока
-    // const parentBlockRect = parentBlock.getBoundingClientRect();
-    // const innerBlockTop = fixedHeight - parentBlockRect.top;
-
-    // Применяем абсолютное позиционирование к внутреннему блоку
-    // innerBlock.style.position = 'absolute';
-    // innerBlock.style.top = `${innerBlockTop}px`;
 }
 
 $('.industries-list__items-slider').slick({
@@ -106,22 +93,30 @@ $('.customers-list__items-slider').slick({
     dots: false,
     slidesToShow: 1,
     infinite: true,
-    // autoplay: true,
-    // speed: 100,
     variableWidth: true,
 });
 
-// let bigMenuAnimate = document.querySelectorAll(".big-menu__btn");
-// let bigMenu = document.querySelector(".header__col-big-menu");
+let accordionBtns = document.querySelectorAll(".accordion-wrap .accordion-head");
 
-// if (bigMenuAnimate && bigMenu) {
-//     bigMenuAnimate.forEach(element => {
-//         element.addEventListener("click", () => {
-//             let menu = bigMenu.classList;
-//             let body = document.querySelector("body").classList;
+if (accordionBtns) {
+    accordionBtns.forEach(element => {
+        element.addEventListener("click", () => {
+            let accordion = element.parentNode.querySelector(".accordion").classList;
+            let body = document.querySelector("body").classList;
 
-//             menu.contains("show") ? menu.remove("show") : menu.add("show");
-//             body.contains("stop-scroll") ? body.remove("stop-scroll") : body.add("stop-scroll");
-//         });
-//     });
-// }
+            accordion.contains("accordion-opened") ? accordion.remove("accordion-opened") : accordion.add("accordion-opened");
+        });
+    });
+}
+
+let mobMenu = document.querySelector(".header__col-burger .burger__btn");
+
+if (mobMenu) {
+    mobMenu.addEventListener("click", () => {
+        let menu = document.querySelector(".header__col-burger").classList;
+        let body = document.querySelector("body").classList;
+
+        menu.contains("header__col-burger-opened") ? menu.remove("header__col-burger-opened") : menu.add("header__col-burger-opened");
+        body.contains("stop-scroll") ? body.remove("stop-scroll") : body.add("stop-scroll");
+    });
+}

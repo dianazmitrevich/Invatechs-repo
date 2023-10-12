@@ -54,15 +54,13 @@ html {
    }
 }
 
-// ::-webkit-scrollbar {
-//    width: 10px;
-//    background: #fff;
-// }
+::-webkit-scrollbar {
+   display: none;
+}
 
-// ::-webkit-scrollbar-thumb {
-//    width: 10px;
-//    background: #2F2F2F;
-// }
+::-webkit-scrollbar-thumb {
+   display: none;
+}
 
 body {
    font-size: 1.6rem;

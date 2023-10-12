@@ -12,11 +12,6 @@
     display: flex;
     justify-content: space-between;
 
-    @include l-tablet {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-
     &:first-of-type {
         border-bottom: 1px solid #525252;
         padding-bottom: 20px;
@@ -24,6 +19,8 @@
 
         @include l-tablet {
             padding-bottom: 0;
+            flex-wrap: wrap;
+            justify-content: flex-start;
         }
     }
 }
