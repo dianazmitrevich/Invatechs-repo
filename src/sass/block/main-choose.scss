@@ -102,6 +102,11 @@
                     border-bottom: none;
                 }
             }
+
+            @include mobile {
+                padding-left: 0;
+                padding-right: 0;
+            }
         }
 
         .numbers__item-num {
@@ -113,7 +118,7 @@
             @include sm-tablet {
                 margin-right: 30px;
                 font-size: 12rem;
-                width: 40%;
+                min-width: 40%;
             }
         }
 
@@ -127,6 +132,10 @@
 
             @include sm-tablet {
                 font-size: 24px;
+            }
+
+            @include mobile {
+                font-size: 22px;
             }
         }
     }

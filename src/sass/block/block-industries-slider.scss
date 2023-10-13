@@ -10,6 +10,10 @@
         width: auto;
     }
 
+    @include mobile {
+        height: 300px !important;
+    }
+
     &:hover {
         img {
             transform: scale(1.1);
@@ -19,10 +23,13 @@
     picture {
         width: 100%;
         height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         img {
-            width: 100%;
-            height: auto;
+            height: 100%;
+            width: auto;
             transition: all .5s ease-in-out;
         }
     }
@@ -31,7 +38,6 @@
 .industries-list__items-slider {
     .slider__arrow {
         content: '';
-        background-image: url('../../img/industries__slider-arrow.svg');
         width: 30px;
         height: 46px;
         position: absolute;
@@ -41,11 +47,12 @@
     }
 
     .slider__arrow-left {
-        transform: rotate(180deg);
+        background-image: url('../../img/industries__slider-arrow-l.svg');
         left: 30px;
     }
 
     .slider__arrow-right {
+        background-image: url('../../img/industries__slider-arrow-r.svg');
         right: 30px;
     }
 }

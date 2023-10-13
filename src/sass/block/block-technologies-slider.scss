@@ -22,6 +22,10 @@
 
 .technologies-list__col-texts {
     width: 500px;
+
+    @include sm-tablet {
+        width: 100%;
+    }
 }
 
 .technologies-list__title {
@@ -98,6 +102,10 @@
 
             @include l-tablet {
                 margin-bottom: 30px;
+            }
+
+            @include mobile {
+                width: calc(50% - 20px);
             }
         }
 

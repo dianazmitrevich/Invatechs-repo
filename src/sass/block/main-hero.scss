@@ -45,7 +45,6 @@
     margin-right: auto;
 
     @include sm-tablet {
-        text-align: left;
         margin-bottom: 25px;
         margin-top: 40px;
     }
@@ -61,7 +60,6 @@
     margin-bottom: 73px;
 
     @include sm-tablet {
-        text-align: left;
         margin-bottom: 40px;
     }
 }
@@ -72,8 +70,6 @@
     margin-bottom: 24px;
 
     @include sm-tablet {
-        margin-left: unset;
-        margin-right: unset;
         margin-bottom: 15px;
     }
 }
@@ -81,9 +77,4 @@
 .hero__cta {
     margin-left: auto;
     margin-right: auto;
-
-    @include sm-tablet {
-        margin-left: unset;
-        margin-right: unset;
-    }
 }
