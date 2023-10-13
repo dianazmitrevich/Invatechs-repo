@@ -48,17 +48,29 @@
         min-width: 50%;
         order: 4;
     }
+
+    @include sm-tablet {
+        width: 100%;
+    }
 }
 
 .footer__col-development {
     @include l-tablet {
         order: 2;
     }
+
+    @include sm-tablet {
+        display: none;
+    }
 }
 
 .footer__col-about {
     @include l-tablet {
         order: 3;
+    }
+
+    @include sm-tablet {
+        display: none;
     }
 }
 
@@ -94,6 +106,10 @@
         font-size: 18px;
         line-height: 140%;
         max-width: 220px;
+
+        @include sm-tablet {
+            max-width: 100%;
+        }
     }
 }
 

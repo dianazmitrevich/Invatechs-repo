@@ -8,6 +8,10 @@
         height: 900px;
     }
 
+    @include sm-tablet {
+        background: $light-side-color;
+    }
+
     &:before {
         content: 'Contact us';
         z-index: 99;
@@ -24,6 +28,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include sm-tablet {
+            display: none;
+        }
     }
 
     .contact__wrapper {
@@ -43,8 +51,15 @@
         @include l-tablet {
             margin-left: calc((100% - 760px) / 2);
             margin-right: calc((100% - 760px) / 2);
-
             padding-bottom: 80px;
+        }
+
+        @include sm-tablet {
+            margin-left: calc((100% - 500px) / 2);
+            margin-right: calc((100% - 500px) / 2);
+            padding-top: 60px;
+            padding-bottom: 60px;
+            max-width: 500px;
         }
 
         &:before {
@@ -75,6 +90,10 @@
         @include l-tablet {
             margin-bottom: 60px;
         }
+
+        @include sm-tablet {
+            margin-bottom: 40px;
+        }
     }
 
     .contact__form {
@@ -83,8 +102,16 @@
         flex-wrap: wrap;
         justify-content: space-between;
 
+        @include sm-tablet {
+            width: 100%;
+        }
+
         .form__item {
             margin-bottom: 40px;
+
+            @include sm-tablet {
+                margin-bottom: 25px;
+            }
 
             input {
                 width: 100%;
@@ -118,6 +145,10 @@
                 font-size: 20px;
                 font-family: 'Source Sans 3', sans-serif;
 
+                @include sm-tablet {
+                    width: 460px;
+                }
+
                 &:focus:invalid {
                     border-bottom: 2px solid red;
                 }
@@ -126,12 +157,21 @@
 
         .form__item-50 {
             width: calc(50% - 15px);
+
+            @include sm-tablet {
+                width: 100%;
+            }
         }
 
         .form__row {
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            @include sm-tablet {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+            }
         }
 
         .form__btn {
@@ -153,6 +193,11 @@
         .form__text {
             font-size: 15px;
             line-height: 140%;
+
+            @include sm-tablet {
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
         }
     }
 }

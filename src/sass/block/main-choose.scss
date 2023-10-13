@@ -36,6 +36,11 @@
             padding-bottom: 80px;
             flex-direction: column;
         }
+
+        @include sm-tablet {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
     }
 
     .choose__col-text {
@@ -70,11 +75,32 @@
             justify-content: space-between;
         }
 
+        @include sm-tablet {
+            flex-direction: column;
+        }
+
         .numbers__item {
             margin-bottom: 40px;
 
             @include l-tablet {
                 margin-bottom: 0;
+            }
+
+            @include sm-tablet {
+                padding-left: 30px;
+                padding-right: 30px;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #c3c3c3;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    border-bottom: none;
+                }
             }
         }
 
@@ -83,11 +109,25 @@
             color: $accent-color;
             font-weight: 700;
             line-height: 100%;
+
+            @include sm-tablet {
+                margin-right: 30px;
+                font-size: 12rem;
+                width: 40%;
+            }
         }
 
         .numbers__item-text {
             font-size: 24px;
             letter-spacing: 0.24px;
+
+            @include l-tablet {
+                font-size: 20px;
+            }
+
+            @include sm-tablet {
+                font-size: 24px;
+            }
         }
     }
 }

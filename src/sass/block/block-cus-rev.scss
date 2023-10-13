@@ -8,6 +8,10 @@
         padding-top: 50px;
         flex-direction: column;
     }
+
+    @include sm-tablet {
+        padding-bottom: 60px;
+    }
 }
 
 .customers-reviews__col-clutch {
@@ -35,6 +39,10 @@
     @include l-tablet {
         margin-bottom: 40px;
     }
+
+    @include sm-tablet {
+        margin-bottom: 30px;
+    }
 }
 
 .customers-reviews__col-slider {
@@ -43,6 +51,11 @@
     @include l-tablet {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    @include sm-tablet {
+        max-width: unset;
+        width: 100%;
     }
 }
 
@@ -111,8 +124,10 @@
         margin-bottom: 60px;
 
         .item__author-image {
-            width: 80px;
-            height: 80px;
+            min-width: 80px;
+            max-width: 80px;
+            min-height: 80px;
+            max-height: 80px;
             border-radius: 50%;
             overflow: hidden;
             margin-right: 25px;

@@ -16,6 +16,10 @@
         height: 60vh;
     }
 
+    @include sm-tablet {
+        min-height: 700px;
+    }
+
     video {
         position: absolute;
         width: 100%;
@@ -39,6 +43,12 @@
     max-width: 810px;
     margin-left: auto;
     margin-right: auto;
+
+    @include sm-tablet {
+        text-align: left;
+        margin-bottom: 25px;
+        margin-top: 40px;
+    }
 }
 
 .hero__subtitle {
@@ -49,15 +59,31 @@
     font-size: 24px;
     line-height: 140%;
     margin-bottom: 73px;
+
+    @include sm-tablet {
+        text-align: left;
+        margin-bottom: 40px;
+    }
 }
 
 .hero__btn {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 24px;
+
+    @include sm-tablet {
+        margin-left: unset;
+        margin-right: unset;
+        margin-bottom: 15px;
+    }
 }
 
 .hero__cta {
     margin-left: auto;
     margin-right: auto;
+
+    @include sm-tablet {
+        margin-left: unset;
+        margin-right: unset;
+    }
 }

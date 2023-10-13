@@ -1,12 +1,22 @@
+.technologies-list {
+    overflow: hidden;
+}
+
 .technologies-list__wrapper {
     padding-top: 150px;
     padding-bottom: 100px;
     display: flex;
     justify-content: space-between;
+    position: relative;
 
     @include l-tablet {
         padding-top: 80px;
         padding-bottom: 80px;
+    }
+
+    @include sm-tablet {
+        padding-top: 60px;
+        padding-bottom: 220px;
     }
 }
 
@@ -68,6 +78,10 @@
         line-height: 140%;
         color: $accent-color;
         margin-bottom: 40px;
+
+        @include sm-tablet {
+            margin-bottom: 25px;
+        }
     }
 
     .item__cards {
@@ -108,12 +122,24 @@
 
         .cards__item-text {
             font-size: 24px;
+
+
+            @include sm-tablet {
+                font-size: 20px;
+            }
         }
     }
 }
 
 .technologies-list__col-cta {
     position: relative;
+
+    @include sm-tablet {
+        position: absolute;
+        bottom: -70px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .technologies-list__col-image {
@@ -156,6 +182,13 @@
         top: 0;
         left: unset;
         right: -20px;
+    }
+
+    @include sm-tablet {
+        top: unset;
+        bottom: 0;
+        right: -50%;
+        transform: translateX(50%);
     }
 
     span {

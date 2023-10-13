@@ -6,4 +6,8 @@
         margin-top: 80px;
         margin-bottom: 40px;
     }
+
+    @include sm-tablet {
+        margin-top: 60px;
+    }
 }

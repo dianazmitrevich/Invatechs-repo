@@ -52,8 +52,10 @@ function centerImagesCaseStudies() {
             innerBlockTop = fixedHeight - parentBlockRect.top;
         }
 
-        innerBlock.style.position = 'absolute';
-        innerBlock.style.top = `${innerBlockTop}px`;
+        if (windowWidth > 767) {
+            innerBlock.style.position = 'absolute';
+            innerBlock.style.top = `${innerBlockTop}px`;
+        }
     });
 }
 

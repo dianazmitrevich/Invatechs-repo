@@ -2,6 +2,10 @@
     .cases__wrapper {
         position: relative;
         padding-bottom: 50px;
+
+        @include sm-tablet {
+            padding-bottom: 35px;
+        }
     }
 
     .cases__btn {
@@ -27,6 +31,13 @@
             right: calc((100% - 760px) / 2);
         }
 
+        @include sm-tablet {
+            left: 50%;
+            right: unset;
+            transform: translateX(-50%);
+            display: none;
+        }
+
         picture {
             margin-top: 15px;
             margin-bottom: -15px;
@@ -40,6 +51,10 @@
 
         @include l-tablet {
             height: 850px;
+        }
+
+        @include sm-tablet {
+            height: fit-content;
         }
 
         &:nth-of-type(1) {
@@ -76,6 +91,11 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @include sm-tablet {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
     }
 
     .cases__title {
@@ -95,6 +115,8 @@
     .item__info {
         margin-left: 150px;
         max-width: 420px;
+        position: relative;
+        z-index: 999;
 
         @include desktop {
             margin-left: 100px;
@@ -104,6 +126,10 @@
             margin-left: 0;
             max-width: 360px;
         }
+
+        @include sm-tablet {
+            max-width: 100%;
+        }
     }
 
     .item__subtitle {
@@ -112,6 +138,10 @@
         line-height: 140%;
         color: $accent-color;
         margin-bottom: 40px;
+
+        @include sm-tablet {
+            margin-bottom: 15px;
+        }
     }
 
     .item__text {
@@ -122,6 +152,10 @@
 
         ul {
             margin-left: 33px;
+        }
+
+        @include sm-tablet {
+            margin-bottom: 25px;
         }
     }
 
@@ -138,12 +172,20 @@
             border: 2px solid #B5B5B5;
             margin-right: 14px;
         }
+
+        @include sm-tablet {
+            margin-bottom: 40px;
+        }
     }
 
     .info-wrap {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include sm-tablet {
+            flex-direction: column;
+        }
     }
 
     .item__image {
@@ -163,6 +205,16 @@
             width: 290px;
         }
 
+        @include sm-tablet {
+            height: fit-content;
+            width: 100%;
+            position: absolute;
+            top: auto;
+            right: 0;
+            opacity: .1;
+            z-index: 99;
+        }
+
         .image-wrap {
             position: relative;
             height: 1000px;
@@ -173,6 +225,11 @@
                 height: 700px;
             }
 
+            @include sm-tablet {
+                height: fit-content;
+                transform: scale(1.2);
+            }
+
             picture {
                 height: 100%;
                 width: 100%;
@@ -180,6 +237,10 @@
                 img {
                     width: 100%;
                     height: 100%;
+
+                    @include sm-tablet {
+                        margin-left: 20px;
+                    }
                 }
             }
         }
