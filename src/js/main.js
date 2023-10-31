@@ -7,6 +7,10 @@ document.addEventListener("scroll", () => {
         outer.classList.remove("header-scroll");
     }
 
+    if (getBodyScrollTop() > 200) {
+        centerImageFillInProject();
+    }
+
     centerImagesCaseStudies();
 });
 
@@ -14,49 +18,57 @@ function getBodyScrollTop() {
     return self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop);
 }
 
-// var caseStudiesImageBlockHeight = $('.main-cases .item__image .image-wrap').height();
-
 function centerImagesCaseStudies() {
-    // let windowHeight = $(window).height();
-    // let windowOffsetY = $(window).scrollTop();
-    // console.log(windowOffsetY)
-
-    // let offsetY = (windowHeight - caseStudiesImageBlockHeight) / 2;
-
-    // $('.main-cases .item__image .image-wrap').css({
-    //     'position': 'absolute',
-    //     'top': offsetY + 'px',
-    // });
-
     const innerBlocks = document.querySelectorAll('.main-cases .item__image .image-wrap');
     const parentBlock = document.querySelector('.main-cases .item__image');
-    var count = 0;
 
-    innerBlocks.forEach((innerBlock, index) => {
+    if (innerBlocks && parentBlock) {
+
+        innerBlocks.forEach((innerBlock, index) => {
+            let windowHeight = $(window).height();
+            let windowWidth = $(window).width();
+
+            const fixedHeight = (windowHeight - innerBlock.clientHeight) / 2;
+
+            const parentBlockRect = parentBlock.getBoundingClientRect();
+
+            var innerBlockTop = 0;
+
+            if (index > 0) {
+                if (windowWidth < 1140) {
+                    innerBlockTop = fixedHeight - parentBlockRect.top - index * 850;
+                } else
+                    innerBlockTop = fixedHeight - parentBlockRect.top - index * 900;
+            }
+            else {
+                innerBlockTop = fixedHeight - parentBlockRect.top;
+            }
+
+            if (windowWidth > 767) {
+                innerBlock.style.position = 'absolute';
+                innerBlock.style.top = `${innerBlockTop}px`;
+            }
+        });
+    }
+}
+
+function centerImageFillInProject() {
+    const imageFill = document.querySelector('.project-delivery .image-fill');
+    const imageFillParent = document.querySelector('.project-delivery .project__col-image');
+
+    if (imageFill && imageFillParent) {
         let windowHeight = $(window).height();
         let windowWidth = $(window).width();
 
-        const fixedHeight = (windowHeight - innerBlock.clientHeight) / 2;
+        const fixedHeight = (windowHeight - imageFill.clientHeight) / 2;
+        const parentBlockRect = imageFillParent.getBoundingClientRect();
 
-        const parentBlockRect = parentBlock.getBoundingClientRect();
-
-        var innerBlockTop = 0;
-
-        if (index > 0) {
-            if (windowWidth < 1140) {
-                innerBlockTop = fixedHeight - parentBlockRect.top - index * 850;
-            } else
-                innerBlockTop = fixedHeight - parentBlockRect.top - index * 900;
-        }
-        else {
-            innerBlockTop = fixedHeight - parentBlockRect.top;
-        }
+        innerBlockTop = fixedHeight - parentBlockRect.top;
 
         if (windowWidth > 767) {
-            innerBlock.style.position = 'absolute';
-            innerBlock.style.top = `${innerBlockTop}px`;
+            imageFill.style.top = `calc(-50% + ${innerBlockTop}px)`;
         }
-    });
+    }
 }
 
 $('.industries-list__items-slider').slick({
@@ -104,7 +116,14 @@ if (accordionBtns) {
     accordionBtns.forEach(element => {
         element.addEventListener("click", () => {
             let accordion = element.parentNode.querySelector(".accordion").classList;
-            let body = document.querySelector("body").classList;
+
+            if (accordion.contains("accordion-open-one") && !accordion.contains("accordion-opened")) {
+                let accordionsList = document.querySelectorAll(".accordion");
+
+                accordionsList.forEach(elementInner => {
+                    elementInner.classList.remove("accordion-opened");
+                });
+            }
 
             accordion.contains("accordion-opened") ? accordion.remove("accordion-opened") : accordion.add("accordion-opened");
         });

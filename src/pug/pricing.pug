@@ -1,0 +1,71 @@
+extends layout/app
+
+block page
+   div(class="g-wrap")
+      div(class="outer-bg inner-page")
+         include chunk/header
+         main(class="g-main")
+            div(class="pricing-contact pricing")
+               div(class="pricing__wrapper container")
+                  div(class="pricing__form form")
+                     div(class="form__title h2") Get Pricing
+                     div(class="form__subtitle") To get an approximate cost of our services for your project feel the form below and we will reach you
+                     div(class="form__wrapper")
+                        div(class="form__item form__item-50")
+                           input(pattern="^*+$", type="text", name="", placeholder="Name*", required)
+                        div(class="form__item form__item-50")
+                           input(pattern="^*+$", type="text", name="", placeholder="Company*", required)
+                        div(class="form__item form__item-50")
+                           input(pattern="^*+$", type="email", name="", placeholder="Work email*", required)
+                        div(class="form__item form__item-50")
+                           input(pattern="^*+$", type="tel", name="", placeholder="Phone*", required)
+                        div(class="form__row form__row-info")
+                           div(class="form__col form__col-radio")
+                              div(class="form__col-title") Specific of your project *
+                              div(class="form__col-items")
+                                 div(class="form__col-item")
+                                    input(type="radio", name="specific", id="specific_1")
+                                    label(for="specific_1") FinTech
+                                 div(class="form__col-item")
+                                    input(type="radio", name="specific", id="specific_2")
+                                    label(for="specific_2") Transportation
+                                 div(class="form__col-item")
+                                    input(type="radio", name="specific", id="specific_3")
+                                    label(for="specific_3") IoT
+                           div(class="form__col form__col-checkboxes")
+                              div(class="form__col-title") What do you need? Choose as many as you want *
+                              div(class="form__col-items")
+                                 div(class="form__col-item")
+                                    input(type="checkbox", name="specific-needs", id="specific-needs_1")
+                                    label(for="specific-needs_1") Mobile App
+                                 div(class="form__col-item")
+                                    input(type="checkbox", name="specific-needs", id="specific-needs_2")
+                                    label(for="specific-needs_2") Web App
+                                 div(class="form__col-item")
+                                    input(type="checkbox", name="specific-needs", id="specific-needs_3")
+                                    label(for="specific-needs_3") Testing
+                           div(class="form__col form__col-stage")
+                              div(class="form__col-title") Current stage of project *
+                              div(class="form__col-items")
+                                 div(class="form__col-item")
+                                    input(type="radio", name="stage", id="stage_1")
+                                    label(for="stage_1") Mobile App
+                                 div(class="form__col-item")
+                                    input(type="radio", name="stage", id="stage_2")
+                                    label(for="stage_2") Web App
+                                 div(class="form__col-item")
+                                    input(type="radio", name="stage", id="stage_3")
+                                    label(for="stage_3") Testing
+                        div(class="form__row")
+                           div(class="form__btn main-btn")
+                              button(type="submit") Get in touch
+                           div(class="form__text") By sending a message you agree with your information being stored by us in relation to dealing with your enquiry. Please have a look at our Privacy Policy.
+            include chunk/block/block-inner-numbers
+            include chunk/block/block-texts-divider
+            div(class="our-customers title-text")
+               div(class="our-customers__wrapper container wrapper")
+                  div(class="title-wrap")
+                     div(class="our-customers__title title h2") Our Customers
+                     div(class="our-customers__text text") We create and deliver results-orientated solutions and services, keeping pace with cutting-edge innovation and maintaining lasting relationships that benefit our client’s long-term goals.
+            include chunk/block/block-customers-slider
+            include chunk/footer

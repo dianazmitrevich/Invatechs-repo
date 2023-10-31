@@ -1,0 +1,218 @@
+.inner-contact {
+    &:before {
+        content: unset !important;
+    }
+
+    .contact__title {
+        font-size: 4rem !important;
+    }
+}
+
+.main-contact {
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    overflow: hidden;
+
+    @include l-tablet {
+        height: 900px;
+    }
+
+    @include sm-tablet {
+        background: $light-side-color;
+    }
+
+    &:before {
+        content: 'Contact us';
+        z-index: 99;
+        top: -40px;
+        left: 0;
+    }
+
+    .contact__video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        object-fit: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include sm-tablet {
+            display: none;
+        }
+    }
+
+    .contact__wrapper {
+        padding-top: 80px;
+        padding-bottom: 120px;
+        background: $light-side-color;
+        position: relative;
+        max-width: 1050px;
+        margin-left: calc((100% - 1440px) / 2);
+        margin-right: calc((100% - 1440px) / 2);
+
+        @include desktop {
+            margin-left: calc((100% - 1100px) / 2);
+            margin-right: calc((100% - 1100px) / 2);
+        }
+
+        @include l-tablet {
+            margin-left: calc((100% - 760px) / 2);
+            margin-right: calc((100% - 760px) / 2);
+            padding-bottom: 80px;
+        }
+
+        @include sm-tablet {
+            margin-left: calc((100% - 500px) / 2);
+            margin-right: calc((100% - 500px) / 2);
+            padding-top: 60px;
+            padding-bottom: 60px;
+            max-width: 500px;
+        }
+
+        @include mobile {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            height: 100%;
+            background: $light-side-color;
+            width: 100%;
+            top: 0;
+            left: -100%;
+        }
+    }
+
+    .contact__title {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 5.4rem;
+        line-height: 140%;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .contact__subtitle {
+        font-size: 20px;
+        line-height: 140%;
+        max-width: 530px;
+        margin-bottom: 90px;
+
+        @include l-tablet {
+            margin-bottom: 60px;
+        }
+
+        @include sm-tablet {
+            margin-bottom: 40px;
+        }
+    }
+
+    .contact__form {
+        width: 590px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include sm-tablet {
+            width: 100%;
+        }
+
+        .form__item {
+            margin-bottom: 40px;
+
+            @include sm-tablet {
+                margin-bottom: 25px;
+            }
+
+            input {
+                width: 100%;
+                background: none;
+                border: none;
+                outline: none;
+                font-size: 20px;
+                padding: 18px 0;
+                border-bottom: 2px solid #000;
+                transition: all .15s ease-in-out;
+
+                &::placeholder {
+                    font-size: 20px;
+                    font-family: 'Source Sans 3', sans-serif;
+                }
+
+                &:focus:invalid {
+                    border-bottom: 2px solid red;
+                }
+            }
+
+            textarea {
+                resize: none;
+                max-width: 100%;
+                width: 600px;
+                outline: none;
+                height: 90px;
+                border: none;
+                background: none;
+                border-bottom: 2px solid #000;
+                font-size: 20px;
+                font-family: 'Source Sans 3', sans-serif;
+
+                @include sm-tablet {
+                    width: 460px;
+                }
+
+                &:focus:invalid {
+                    border-bottom: 2px solid red;
+                }
+            }
+        }
+
+        .form__item-50 {
+            width: calc(50% - 15px);
+
+            @include sm-tablet {
+                width: 100%;
+            }
+        }
+
+        .form__row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include sm-tablet {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+            }
+        }
+
+        .form__btn {
+            min-width: 204px;
+            padding: 5px 0;
+            text-align: center;
+            margin-right: 30px;
+            border-radius: 4px;
+
+            button {
+                font-family: 'Ubuntu', sans-serif;
+                background: none;
+                border: none;
+                font-size: 18px;
+                white-space: nowrap;
+            }
+        }
+
+        .form__text {
+            font-size: 15px;
+            line-height: 140%;
+
+            @include sm-tablet {
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

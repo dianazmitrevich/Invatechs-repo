@@ -1,0 +1,52 @@
+extends layout/app
+
+block page
+   div(class="g-wrap")
+      div(class="outer-bg inner-page")
+         include chunk/header
+         main(class="g-main")
+            div(class="inner-banner banner")
+               div(class="banner__wrapper container")
+                  div(class="banner__title") How we work
+                  div(class="banner__subtitle") Invatechs provides the best IT services on the market, delivering exceptional customer results through our expertise and innovation
+            div(class="project-delivery project")
+               div(class="project__wrapper container")
+                  div(class="project__title h2") Full-cycle delivery team
+                  div(class="project__subtitle") Invatechs is a full-cycle software development company that provides comprehensive and reliable software solutions for businesses of all sizes. Our team comprises experienced project managers, business analysts, UI/UX designers, developers, quality assurance specialists, and DevOps engineers who work together to successfully deliver high-quality software according to the customer's requirements.
+                  div(class="project__row")
+                     div(class="project__col project__col-image")
+                        div(class="image-fill")
+                        img(src="img/how-we-work-bg.png", alt="How we work")
+                     div(class="project__col project__col-texts")
+                        div(class="text-wrap")
+                           div(class="title") Project Analysis
+                           div(class="text") At the project analysis stage, we discuss the goals and requirements of the project, analyze the market and competition, and determine the user needs and essential functional requirements for the software. We use various tools and processes to collect data and develop an understanding of the project's purpose, scope, and objectives.
+                        div(class="text-wrap")
+                           div(class="title") Development
+                           div(class="text") Once we have collected the requirements, we begin developing the software. This includes creating the design, architecture, and code of the application. As we develop the software, we ensure it is robust and scalable, meeting the customer's needs and requirements.
+                        div(class="text-wrap")
+                           div(class="title") Testing
+                           div(class="text") Before the software is released to the market, we perform various tests to ensure that all features and functions work properly and that the application meets the customer's requirements. We use automated testing tools and manual testing processes to ensure the software is up to the standards of quality and accuracy we aim for.
+                        div(class="text-wrap")
+                           div(class="title") Release
+                           div(class="text") Once all tests have been successful, the application is ready to be released to the market. At this stage, we prepare the application for release and ensure it is ready for public consumption.
+                        div(class="text-wrap")
+                           div(class="title") Product Support
+                           div(class="text") Once the software is released, we continue to serve our customers and offer them support by providing updates and bug fixes to the application. This ensures that the application functions properly and efficiently throughout its lifespan.
+            include chunk/block/block-technologies-slider
+            div(class="texts-divider texts dark-bg")
+               div(class="texts__wrapper container")
+                  div(class="title-wrap")
+                     div(class="texts__title title") Pricing Models
+                     div(class="texts__subtitle") In addition, Invatechs offers a custom pricing model to meet the particular demands and needs of the client. The company emphasizes keeping communication with the customers open so that they are aware of all costs.
+                  div(class="texts__items")
+                     div(class="texts__item item")
+                        div(class="item__title title-yellow") The size of the team
+                        div(class="item__text") The more team members, the higher the cost. This model is suitable for large-scale projects with complex requirements that require a dedicated team of specialists.
+                     div(class="texts__item item")
+                        div(class="item__title title-yellow") Project size and complexity
+                        div(class="item__text") The larger and more complex the project, the higher the cost. This model is suitable for mid to large-scale projects with varying complexity.
+                     div(class="texts__item item")
+                        div(class="item__title title-yellow") Experience of the employees
+                        div(class="item__text") The more experienced the team members, the higher the cost. This model is suitable for complex projects that require a high level of expertise and experience.
+            include chunk/footer

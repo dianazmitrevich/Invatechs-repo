@@ -1,0 +1,47 @@
+extends layout/app
+
+block page
+   div(class="g-wrap")
+      div(class="outer-bg inner-page")
+         include chunk/header
+         main(class="g-main")
+            div(class="inner-banner banner")
+               div(class="banner__wrapper container")
+                  div(class="banner__title") Case studies
+                  div(class="banner__tags")
+                     a(class="banner__tag") .NET
+                     a(class="banner__tag") API
+                     a(class="banner__tag banner__tag-selected") Advertisement
+                     a(class="banner__tag") Machine Learning
+            div(class="case-studies-list list")
+               div(class="list__wrapper container")
+                  a(class="list__item item")
+                     div(class="item__image")
+                        img(src="img/case-image.png", alt="Case image")
+                     div(class="item__info")
+                        div(class="item__title") Open Banking Application
+                        div(class="item__subtitle") High-tech whitelabel application with open banking API integration
+                        div(class="item__links") Banking, Kotlin, Swift, API, Whitelabel, Application
+                  a(class="list__item item", href="case-studies-page.html")
+                     div(class="item__image")
+                        img(src="img/case-image.png", alt="Case image")
+                     div(class="item__info")
+                        div(class="item__title") Cryptocurrency E-wallet Application
+                        div(class="item__subtitle") Modern and convenient cryptocurrency investment app for storing and maintaining crypto assets.
+                        div(class="item__links") Cryptocurrency, JavaScript, NodeJS, Application
+                  a(class="list__item item")
+                     div(class="item__image")
+                        img(src="img/case-image.png", alt="Case image")
+                     div(class="item__info")
+                        div(class="item__title") Ethereum Based ICO
+                        div(class="item__subtitle") Using Solidity smart contracts
+                        div(class="item__links") Fintech, ReactJS
+                  a(class="list__item item")
+                     div(class="item__image")
+                        img(src="img/case-image.png", alt="Case image")
+                     div(class="item__info")
+                        div(class="item__title") Open Banking Application
+                        div(class="item__subtitle") High-tech whitelabel application with open banking API integration
+                        div(class="item__links") Banking, Kotlin, Swift, API, Whitelabel, Application
+
+            include chunk/footer

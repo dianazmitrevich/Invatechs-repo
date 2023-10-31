@@ -1,0 +1,245 @@
+.pricing-contact {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    &:before {
+        position: absolute;
+        content: '';
+        background-image: url('../img/inner-banner-bg.png');
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        z-index: 99;
+    }
+
+    .pricing__wrapper {
+        padding-top: 170px;
+        padding-bottom: 80px;
+    }
+
+    .pricing__form {
+        position: relative;
+        z-index: 99999;
+        background: $light-main-color;
+        padding: 80px 70px;
+
+        .form__subtitle {
+            font-size: 18px;
+            line-height: 140%;
+            margin-top: 25px;
+            margin-bottom: 40px;
+        }
+
+        .form__wrapper {
+            width: 900px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            @include sm-tablet {
+                width: 100%;
+            }
+
+            .form__item {
+                margin-bottom: 40px;
+
+                @include sm-tablet {
+                    margin-bottom: 25px;
+                }
+
+                input {
+                    width: 100%;
+                    background: none;
+                    border: none;
+                    outline: none;
+                    font-size: 20px;
+                    padding: 18px 0;
+                    border-bottom: 2px solid #000;
+                    transition: all .15s ease-in-out;
+
+                    &::placeholder {
+                        font-size: 20px;
+                        font-family: 'Source Sans 3', sans-serif;
+                    }
+
+                    &:focus:invalid {
+                        border-bottom: 2px solid red;
+                    }
+                }
+
+                textarea {
+                    resize: none;
+                    max-width: 100%;
+                    width: 600px;
+                    outline: none;
+                    height: 90px;
+                    border: none;
+                    background: none;
+                    border-bottom: 2px solid #000;
+                    font-size: 20px;
+                    font-family: 'Source Sans 3', sans-serif;
+
+                    @include sm-tablet {
+                        width: 460px;
+                    }
+
+                    &:focus:invalid {
+                        border-bottom: 2px solid red;
+                    }
+                }
+            }
+
+            .form__item-50 {
+                width: calc(50% - 15px);
+
+                @include sm-tablet {
+                    width: 100%;
+                }
+            }
+
+            .form__row {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                @include sm-tablet {
+                    flex-direction: column-reverse;
+                    align-items: flex-start;
+                }
+            }
+
+            .form__row-info {
+                margin-top: 20px;
+                margin-bottom: 40px;
+                flex-wrap: wrap;
+
+                .form__col {
+                    width: calc(50% - 15px);
+                }
+
+                .form__col-title {
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 100%;
+                    margin-bottom: 25px;
+                }
+
+                .form__col-item {
+                    margin-bottom: 20px;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+
+                    input[type="checkbox"] {
+                        position: absolute;
+                        z-index: -1;
+                        opacity: 0;
+                    }
+
+                    input[type="checkbox"]+label {
+                        display: inline-flex;
+                        align-items: center;
+                        user-select: none;
+                        font-size: 18px;
+                        line-height: 10px;
+                    }
+
+                    input[type="checkbox"]+label::before {
+                        content: '';
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        flex-shrink: 0;
+                        flex-grow: 0;
+                        margin-right: 10px;
+                        background-image: url('../img/checkbox.svg');
+                    }
+
+                    input[type="checkbox"]:checked+label::before {
+                        background-image: url('../img/checkbox-checked.svg');
+                    }
+
+                    input[type="radio"] {
+                        position: absolute;
+                        z-index: -1;
+                        opacity: 0;
+                    }
+
+                    input[type="radio"]+label {
+                        display: inline-flex;
+                        align-items: center;
+                        user-select: none;
+                        font-size: 18px;
+                        line-height: 10px;
+                    }
+
+                    input[type="radio"]+label::before {
+                        content: '';
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        flex-shrink: 0;
+                        flex-grow: 0;
+                        margin-right: 10px;
+                        background-image: url('../img/radio.svg');
+                    }
+
+                    input[type="radio"]:checked+label::before {
+                        background-image: url('../img/radio-checked.svg');
+                    }
+                }
+
+                .form__col-stage {
+                    margin-top: 40px;
+                    width: 100% !important;
+
+                    .form__col-items {
+                        display: flex;
+                    }
+
+                    .form__col-item {
+                        margin-right: 50px;
+
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+
+            .form__btn {
+                min-width: 204px;
+                padding: 5px 0;
+                text-align: center;
+                margin-right: 30px;
+                border-radius: 4px;
+
+                button {
+                    font-family: 'Ubuntu', sans-serif;
+                    background: none;
+                    border: none;
+                    font-size: 18px;
+                    white-space: nowrap;
+                }
+            }
+
+            .form__text {
+                font-size: 15px;
+                line-height: 140%;
+
+                @include sm-tablet {
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}

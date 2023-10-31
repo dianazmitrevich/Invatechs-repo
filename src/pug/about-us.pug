@@ -1,0 +1,54 @@
+extends layout/app
+
+block page
+   div(class="g-wrap")
+      div(class="outer-bg inner-page")
+         include chunk/header
+         main(class="g-main")
+            div(class="inner-banner banner")
+               div(class="banner__wrapper container")
+                  div(class="banner__title") We are Invatechs
+                  div(class="banner__subtitle") Invatechs is a top-notch creator of modern software, helping customers materialize their ideas and enhance their products.
+            include chunk/block/block-inner-numbers
+            include chunk/block/block-texts-divider
+            include chunk/block/block-text-image
+            div(class="our-customers title-text")
+               div(class="our-customers__wrapper container wrapper")
+                  div(class="title-wrap")
+                     div(class="our-customers__title title h2") Our Customers
+                     div(class="our-customers__text text") We create and deliver results-orientated solutions and services, keeping pace with cutting-edge innovation and maintaining lasting relationships that benefit our client’s long-term goals.
+            include chunk/block/block-customers-slider
+            div(class="office-locations office")
+               div(class="office__wrapper container")
+                  div(class="office__col")
+                     div(class="office__title h2") Our office locations
+                  div(class="office__col office__col-items")
+                     div(class="office__item item")
+                        div(class="item__title") England (York)
+                        div(class="item__text") York Eco Business Centre (Office 12) Amy Johnson Way, Clifton Moor, York
+                     div(class="office__item item")
+                        div(class="item__title") Poland (Warsaw)
+                        div(class="item__text") Ogrodowa 58, 00-876 Warszawa +48573355227
+            div(class="inner-contact main-contact contact")
+               div(class="contact__video")
+                  video(autoplay="" loop="" muted="")
+                     source(src="https://video.wixstatic.com/video/d0d56f_d3cd3e856b7046bd90cafad377de3463/1080p/mp4/file.mp4" type="video/mp4") 
+               div(class="contact__wrapper container")
+                  div(class="contact__title h2") Contact us!
+                  div(class="contact__subtitle") Need an experienced and skilled hand with custom IT projects? Fill out the form to get a consultation.
+                  div(class="contact__form form")
+                     div(class="form__item form__item-50")
+                        input(pattern="^*+$", type="text", name="", placeholder="Name*", required)
+                     div(class="form__item form__item-50")
+                        input(pattern="^*+$", type="text", name="", placeholder="Company*", required)
+                     div(class="form__item form__item-50")
+                        input(pattern="^*+$", type="email", name="", placeholder="Work email*", required)
+                     div(class="form__item form__item-50")
+                        input(pattern="^*+$", type="tel", name="", placeholder="Phone*", required)
+                     div(class="form__item form__item-100")
+                        textarea(name="^*+$", placeholder="What can we help you with?*", required)
+                     div(class="form__row")
+                        div(class="form__btn main-btn")
+                           button(type="submit") Get in touch
+                        div(class="form__text") By sending a message you agree with your information being stored by us in relation to dealing with your enquiry. Please have a look at our Privacy Policy.
+            include chunk/footer

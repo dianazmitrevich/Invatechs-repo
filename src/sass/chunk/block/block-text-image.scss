@@ -1,0 +1,38 @@
+.text-image {
+    background: #F8F8F8;
+    overflow: hidden;
+
+    &:before {
+        content: 'Quick facts';
+        bottom: -40px;
+        left: 0;
+    }
+
+    .text__wrapper {
+        padding-top: 120px;
+        padding-bottom: 80px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .text-wrap {
+        max-width: 500px;
+    }
+
+    .text__title {
+        margin-bottom: 25px;
+    }
+
+    .text__info {
+        font-size: 18px;
+        line-height: 140%;
+
+        p {
+            margin-bottom: 10px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

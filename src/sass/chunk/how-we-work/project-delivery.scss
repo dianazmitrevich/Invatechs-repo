@@ -1,0 +1,80 @@
+.project-delivery {
+    background: #FBFBFD;
+
+    .project__wrapper {
+        padding-top: 100px;
+        padding-bottom: 80px;
+    }
+
+    .project__title {
+        margin-bottom: 25px;
+    }
+
+    .project__subtitle {
+        max-width: 880px;
+        font-size: 18px;
+        line-height: 140%;
+    }
+
+    .project__row {
+        display: flex;
+        margin-top: 30px;
+    }
+
+    .project__col-image {
+        min-width: 770px;
+        max-width: 770px;
+        height: 989px;
+        overflow: hidden;
+        position: relative;
+        background: #777981;
+
+        .image-fill {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: $accent-color;
+            top: -100%;
+            left: 0;
+        }
+
+        picture {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .project__col-texts {
+        padding-top: 70px;
+
+        .text-wrap {
+            margin-bottom: 25px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .title {
+                font-family: $font-family-ubuntu;
+                font-size: 24px;
+                line-height: 140%;
+                margin-bottom: 8px;
+            }
+
+            .text {
+                font-size: 18px;
+                line-height: 140%;
+            }
+        }
+    }
+}

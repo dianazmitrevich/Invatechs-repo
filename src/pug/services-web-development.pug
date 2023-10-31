@@ -1,0 +1,51 @@
+extends layout/app
+
+block page
+   div(class="g-wrap")
+      div(class="outer-bg inner-page")
+         include chunk/header
+         main(class="g-main")
+            div(class="inner-banner banner inner-banner-services")
+               div(class="banner__wrapper container")
+                  div(class="banner__title") Web Development Company
+                  div(class="banner__subtitle") Invatechs professionals have 10+ background in developing web services and platforms of any complexity. We always follow the trends and innovative implementations in our projects. In addition, we successfully apply our knowledge in Fintech, Logistics, eCommerce, Real Estate, Restaurants, etc
+            include chunk/block/block-sm-text-image
+            include chunk/block/block-texts-icons
+            include chunk/block/block-billet-light
+            include chunk/block/block-workflow-icons
+            include chunk/block/block-text-image-dark
+            include chunk/block/block-stack-icons
+            include chunk/block/block-text-tags
+            div(class="billet-dark block-billet billet")
+               div(class="billet__wrapper container")
+                  div(class="billet__title h2") Want an innovative website?
+                  div(class="billet__btn main-arr-btn") We can discuss it now
+            include chunk/block/block-customers-think
+            include chunk/block/block-success-stories
+            include chunk/block/block-faq
+            div(class="texts-icons texts dark-bg")
+               div(class="texts__wrapper container")
+                  div(class="title-wrap")
+                     div(class="texts__title title") Need other services?
+                  div(class="texts__cards")
+                     div(class="texts__card card")
+                        div(class="card__image")
+                           img(src="img/web-app-icon.svg", alt="Web")
+                        div(class="card__title title-yellow") Web application development
+                        div(class="card__text") If you are looking for a company that can meet all your business requirements in a web application, Invatechs can provide the expertise to implement a customized solution.
+                     div(class="texts__card card")
+                        div(class="card__image")
+                           img(src="img/ui-icon.svg", alt="UI")
+                        div(class="card__title title-yellow") Web UI/UX design
+                        div(class="card__text") Based on your ideas, our creative designers can create a trendy and user-friendly design that will attract your site visitors.
+                     div(class="texts__card card")
+                        div(class="card__image")
+                           img(src="img/ecommerce-icon.svg", alt="Ecommerce")
+                        div(class="card__title title-yellow") Bespoke Software
+                        div(class="card__text") We already have a lot of successful cases related to small businesses. If you want to become an entrepreneur with your website, you can contact us for help.
+                     div(class="texts__card card")
+                        div(class="card__image")
+                           img(src="img/api-icon.svg", alt="API")
+                        div(class="card__title title-yellow") API Development and Integration
+                        div(class="card__text") We can integrate modern and feature-rich APIs into your platforms. You can count on seamless Integration and only the most secure development methods.
+            include chunk/footer

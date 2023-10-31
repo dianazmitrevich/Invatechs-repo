@@ -1,0 +1,33 @@
+.sm-text-image {
+    .text__wrapper {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .text__info {
+        font-size: 18px;
+        line-height: 140%;
+        max-width: 470px;
+    }
+
+    .text__image {
+        height: 100%;
+        width: 50%;
+
+        picture {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+extends layout/app
+
+block page
+   div(class="g-wrap")
+      div(class="outer-bg inner-page")
+         include chunk/header
+         main(class="g-main")
+            div(class="inner-banner banner banner-cr-width")
+               div(class="banner__wrapper container")
+                  div(class="banner__title") InvaBlog
+            div(class="invablog")
+               div(class="invablog__wrapper container")
+                  div(class="invablog__cards")
+                     div(class="invablog__card card")
+                        div(class="card__image")
+                           img(src="img/invablog-card-1.png", alt="Invablog")
+                        div(class="card__info")
+                           div(class="card__meta")
+                              div(class="card__author") Darya Kuksachenka
+                              div(class="card__date") Aug 14&nbsp;&nbsp;•&nbsp;&nbsp;4 min
+                              a(class="card__share") •<br>•<br>•
+                           div(class="card__title") The Advantages and Challenges of Developing Web Apps with React
+                           div(class="card__text") Building Web Apps with React: Unlocking Advantages, Overcoming Challenges. React has emerged as a popular JavaScript library for building...
+                     div(class="invablog__card card")
+                        div(class="card__image")
+                           img(src="img/invablog-card-2.png", alt="Invablog")
+                        div(class="card__info")
+                           div(class="card__meta")
+                              div(class="card__author") Darya Kuksachenka
+                              div(class="card__date") Aug 8&nbsp;&nbsp;•&nbsp;&nbsp;4 min
+                              a(class="card__share") •<br>•<br>•
+                           div(class="card__title") How Financial Technology Is Changing The Way We Invest
+                           div(class="card__text") From robo-advisor to mobile trading apps, the rise of financial technology has revolutionized the investment landscape, offering new...
+                     div(class="invablog__card card")
+                        div(class="card__image")
+                           img(src="img/invablog-card-3.png", alt="Invablog")
+                        div(class="card__info")
+                           div(class="card__meta")
+                              div(class="card__author") Darya Kuksachenka
+                              div(class="card__date") Jul 11&nbsp;&nbsp;•&nbsp;&nbsp;4 min
+                              a(class="card__share") •<br>•<br>•
+                           div(class="card__title") Boost Your Business with Artificial Intelligence: An Invatechs Integration Guide
+                           div(class="card__text") The Power of Artificial Intelligence for SMBs Artificial Intelligence (AI) has become a game-changer in the business world, and small to...
+                  div(class="invablog__pagination pagination")
+                     div(class="pagination__first")
+                        img(src="img/link-last.svg", alt="First")
+                     div(class="pagination__prev")
+                        img(src="img/link-next.svg", alt="Previous")
+                     div(class="pagination__links")
+                        div(class="pagination__link") 1
+                        div(class="pagination__link pagination__link-selected") 2
+                        div(class="pagination__link") 3
+                        div(class="pagination__link") 4
+                     div(class="pagination__next")
+                        img(src="img/link-next.svg", alt="Last")
+                     div(class="pagination__last")
+                        img(src="img/link-last.svg", alt="Next")
+            include chunk/footer

@@ -1,0 +1,75 @@
+.hr-contact {
+    .contact__wrapper {
+        display: flex;
+    }
+
+    .contact__col-btns {
+        width: 60%;
+    }
+
+    .contact__col-links {
+        width: 40px;
+    }
+
+    .contact__title {
+        margin-bottom: 25px;
+    }
+
+    .contact__subtitle {
+        font-size: 18px;
+        line-height: 140%;
+        max-width: 380px;
+        margin-bottom: 30px;
+
+        a {
+            color: $accent-color;
+        }
+    }
+
+    .contact__col-hr {
+        .hr__title {
+            font-size: 32px;
+            line-height: 140%;
+            font-family: $font-family-ubuntu;
+        }
+
+        .hr__position {
+            color: #B5B5B5;
+            font-size: 18px;
+            line-height: 140%;
+            margin-bottom: 20px;
+        }
+
+        .hr__link {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+
+            &:last-of-type {
+                a {
+                    text-decoration: underline;
+                }
+            }
+
+            picture {
+                width: 34px;
+                height: 34px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 15px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            a {
+                font-family: $font-family-ubuntu;
+                font-size: 20px;
+                line-height: 140%;
+            }
+        }
+    }
+}

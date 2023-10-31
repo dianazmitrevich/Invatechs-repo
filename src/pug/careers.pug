@@ -1,0 +1,43 @@
+extends layout/app
+
+block page
+   div(class="g-wrap")
+      div(class="outer-bg inner-page")
+         include chunk/header
+         main(class="g-main")
+            div(class="inner-banner banner")
+               div(class="banner__wrapper container")
+                  div(class="banner__title") We would like to see you on our team!
+            div(class="open-positions positions")
+               div(class="positions__wrapper container")
+                  div(class="positions__title h2") Open positions
+                  div(class="positions__items")
+                     div(class="positions__item item")
+                        div(class="item__col")
+                           div(class="item__col-title") Data Scientist
+                           div(class="item__col-text") The Invatechs team is looking for a Data Scientist for a multimedia project, which will be worked on jointly with a large American company.
+                        div(class="item__col")
+                           a(href="", class="item__col-btn") Read more
+            div(class="hr-contact contact dark-bg")
+               div(class="contact__wrapper container")
+                  div(class="contact__col contact__col-btns")
+                     div(class="contact__title h2") Can't find what you need?
+                     div(class="contact__subtitle") Leave your contact details by filling in the form or emailing us at <a href="mailto:info@invatechs.com">info@invatechs.com</a>, and weʼll get in touch with you if something comes up
+                     div(class="contact__btn main-arr-btn") Go to Contact form
+                  div(class="contact__col contact__col-hr hr")
+                     div(class="hr__title") Uliana
+                     div(class="hr__position") Head of Recruitment
+                     div(class="hr__links")
+                        div(class="hr__link")
+                           img(src="img/hr__phone.svg", alt="Phone")
+                           a(href="tel:48576226307") +48 576 226 307
+                        div(class="hr__link")
+                           img(src="img/hr__tg.svg", alt="Telegram")
+                           a(href="") @janeli2
+                        div(class="hr__link")
+                           img(src="img/hr__phone.svg", alt="Email")
+                           a(href="mailto:u.masalova@invatechs.com") u.masalova@invatechs.com
+                        div(class="hr__link")
+                           img(src="img/hr__in.svg", alt="LinkedIn")
+                           a(href="") LinkedIn
+            include chunk/footer

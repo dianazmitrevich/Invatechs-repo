@@ -1,0 +1,55 @@
+.tecnhonolies-page-list {
+    .list__item {
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        &:nth-of-type(2n-1) {
+            background: $light-main-color;
+        }
+
+        &:nth-of-type(2n) {
+            background: #FAFAFC;
+        }
+
+        .item__wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .item__col-text {
+            max-width: 440px;
+        }
+
+        .item__col-icons {
+            width: 40%;
+            margin-top: 59px;
+
+            .icons__wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 460px;
+            }
+
+            .icons__item {
+                width: 50%;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+            }
+
+            .icons__item-text {
+                font-family: $font-family-ubuntu;
+                margin-left: 20px;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 140%;
+            }
+        }
+
+        .item__title {
+            padding-bottom: 10px;
+            border-bottom: 3px solid $accent-color;
+            margin-bottom: 15px;
+        }
+    }
+}

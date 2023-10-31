@@ -1,0 +1,117 @@
+.invablog__wrapper {
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.invablog__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.invablog__card {
+    width: calc(50% - 35px);
+    border: 1px solid rgba(181, 181, 181, 0.50);
+    margin-bottom: 70px;
+
+    .card__image {
+        width: 100%;
+        aspect-ratio: 443/248;
+        height: auto;
+        overflow: hidden;
+
+        picture {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .card__info {
+        padding: 25px 32px;
+    }
+
+    .card__meta {
+        margin-bottom: 12px;
+        font-family: $font-family-ubuntu;
+        font-size: 12px;
+        line-height: normal;
+        position: relative;
+    }
+
+    .card__author {
+        margin-bottom: 3px;
+    }
+
+    .card__title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 140%;
+        margin-bottom: 12px;
+    }
+
+    .card__text {
+        font-size: 18px;
+        line-height: 150%;
+    }
+
+    .card__share {
+        position: absolute;
+        top: 0;
+        right: 0;
+        line-height: 50%;
+    }
+}
+
+.invablog__pagination {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+
+    picture {
+        width: 42px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pagination__first,
+    .pagination__prev {
+        img {
+            transform: rotate(180deg);
+        }
+    }
+
+    .pagination__links {
+        display: flex;
+        align-items: center;
+    }
+
+    .pagination__link {
+        width: 42px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        line-height: normal;
+        font-family: $font-family-ubuntu;
+    }
+
+    .pagination__link-selected {
+        color: $accent-color;
+    }
+}

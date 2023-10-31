@@ -1,0 +1,17 @@
+.billet-light {
+    .billet__wrapper {
+        &:before {
+            background-image: url('../img/billet-light-bg.png');
+        }
+    }
+}
+
+.billet-dark {
+    color: #fff;
+
+    .billet__wrapper {
+        &:before {
+            background-image: url('../img/billet-dark-bg.png');
+        }
+    }
+}

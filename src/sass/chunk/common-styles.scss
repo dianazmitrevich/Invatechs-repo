@@ -1,0 +1,134 @@
+.dark-bg {
+    background: $dark-main-color;
+    color: $light-main-color;
+    padding: 120px 0;
+
+    @include l-tablet {
+        padding: 80px 0;
+    }
+
+    @include sm-tablet {
+        padding: 60px 0;
+    }
+
+    .title-wrap {
+        margin-bottom: 50px;
+
+        @include sm-tablet {
+            margin-bottom: 40px;
+        }
+    }
+
+    .title {
+        font-size: 4rem;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 700;
+    }
+
+    .title-yellow {
+        font-size: 24px;
+        font-family: 'Source Sans 3', sans-serif;
+        font-weight: 700;
+        color: $accent-color;
+
+        @include sm-tablet {
+            font-size: 18px;
+        }
+    }
+}
+
+.dark-side-bg {
+    background: $dark-side-color;
+}
+
+.bg-text {
+    position: relative;
+
+    &:before {
+        white-space: nowrap;
+        position: absolute;
+        text-transform: uppercase;
+        font-size: 170px;
+        font-weight: 700;
+        font-family: 'Ubuntu', sans-serif;
+        opacity: .04;
+
+        @include l-tablet {
+            font-size: 120px;
+        }
+    }
+}
+
+.title-text {
+    background: #FBFBFD;
+
+    .wrapper {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .title-wrap {
+        display: flex;
+        justify-content: space-between;
+
+        .text {
+            max-width: 600px;
+            font-size: 18px;
+            line-height: 140%;
+        }
+    }
+}
+
+.block-billet {
+    .billet__wrapper {
+        margin-top: 70px;
+        margin-bottom: 70px;
+        min-height: 320px;
+        width: 100%;
+        padding: 70px 85px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+
+        &:before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .billet__title {
+        max-width: 740px;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 9;
+    }
+}
+
+.accordion {
+    transition: all .6s ease-in-out;
+    max-height: 0;
+}
+
+.accordion-opened {
+    max-height: 400px;
+    margin-top: 0;
+}
+
+.accordion-wrap {
+    position: relative;
+}
+
+.accordion-arrow {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    transition: all .25s ease-in-out;
+}

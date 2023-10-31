@@ -1,6 +1,5 @@
 // transition: all .25s ease-in-out;
 .header {
-    // background: #fff;
     max-width: 1920px;
     height: 90px;
     position: fixed;
@@ -11,7 +10,13 @@
     display: flex;
     align-items: center;
     z-index: 999999;
-    // border-bottom: 1px solid #D9D9D9;
+}
+
+.inner-page {
+    .header {
+        background: #fff;
+        border-bottom: 1px solid #D9D9D9;
+    }
 }
 
 .header__desktop {
@@ -256,8 +261,6 @@
                 .accordion {
                     margin-top: 25px;
                     margin-left: 25px;
-                    transition: all .25s ease-in-out;
-                    max-height: 1000px;
 
                     li {
                         font-weight: 400;
@@ -267,8 +270,7 @@
                 }
 
                 .accordion-opened {
-                    max-height: 0;
-                    margin-top: 0;
+                    max-height: 1000px !important;
                 }
             }
         }

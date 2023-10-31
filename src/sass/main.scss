@@ -1,14 +1,13 @@
 $base-font-size: 10px;
 $base-line-height: 1.15;
+$font-family-ubuntu: 'Ubuntu', sans-serif;
+$font-family-sans: 'Source Sans 3', sans-serif;
 $accent-color: #EFD91B;
 $light-main-color: #fff;
 $light-side-color: #FBFBFD;
 $dark-main-color: #222222;
 $dark-side-color: #3E3E3E;
 $lighter-text-color: #949494;
-
-// font-family: 'Source Sans 3', sans-serif;
-// font-family: 'Ubuntu', sans-serif;
 
 @mixin mobile {
    @media (max-width: 575px) {
@@ -66,9 +65,11 @@ body {
    font-size: 1.6rem;
    font-family: 'Source Sans 3', sans-serif;
    line-height: 1.5;
+   font-weight: 400;
    overflow-x: hidden;
    overflow-y: scroll;
    color: $dark-main-color;
+   background: #FCFCFD;
 }
 
 .container {
@@ -204,6 +205,18 @@ a {
    font-size: 4rem;
 }
 
+.h3 {
+   font-family: 'Ubuntu', sans-serif;
+   font-weight: 700;
+   font-size: 30px;
+}
+
+.h4 {
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 140%;
+}
+
 .main-btn {
    padding: 10px 70px;
    background: $accent-color;
@@ -213,12 +226,22 @@ a {
    width: fit-content;
 }
 
+.main-tr-btn {
+   padding: 10px 70px;
+   font-size: 20px;
+   line-height: 200%;
+   color: $dark-main-color;
+   border: 1px solid $dark-main-color;
+   width: fit-content;
+}
+
 .main-cta {
    font-size: 19px;
    line-height: 200%;
    padding-right: 40px;
    position: relative;
    width: fit-content;
+   white-space: nowrap;
 
    &::after {
       position: absolute;
@@ -253,4 +276,25 @@ a {
    }
 }
 
-@import "block/*.scss";
+.main-arr-tr-btn {
+   font-size: 18px;
+   padding: 14px 30px;
+   padding-right: 64px;
+   width: fit-content;
+   color: $dark-main-color;
+   border: 1px solid $dark-main-color;
+   position: relative;
+
+   &::after {
+      position: absolute;
+      content: '';
+      background-image: url('../img/arrow-right-icon.svg');
+      width: 20px;
+      height: 10px;
+      top: 50%;
+      right: 30px;
+      transform: translateY(-50%)
+   }
+}
+
+@import "chunk/**/*.scss";

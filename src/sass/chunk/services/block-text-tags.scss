@@ -1,0 +1,29 @@
+.text-tags {
+    margin-bottom: 120px;
+    margin-bottom: 100px;
+
+    .text__title {
+        margin-bottom: 25px;
+    }
+
+    .text__info {
+        max-width: 970px;
+        font-size: 18px;
+        line-height: 140%;
+        margin-bottom: 40px;
+    }
+
+    .text__items {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .text__item {
+        font-size: 18px;
+        line-height: 140%;
+        padding: 18px 40px;
+        border: 1px solid #222;
+        margin-right: 20px;
+    }
+}
