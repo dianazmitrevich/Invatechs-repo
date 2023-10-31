@@ -5,17 +5,38 @@
         font-size: 18px;
         line-height: 140%;
         max-width: 830px;
+
+        @include l-tablet {
+            margin-top: 15px;
+        }
+
+        @include sm-tablet {
+            font-size: 16px;
+        }
     }
 
     .texts__items {
         display: flex;
         justify-content: space-between;
+
+        @include l-tablet {
+            flex-direction: column;
+        }
     }
 
     .texts__item {
         width: calc(100% / 3);
         padding-left: 20px;
         border-left: 1px solid #fff;
+
+        @include l-tablet {
+            width: 100%;
+            margin-bottom: 20px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
     }
 
     .item__text {
@@ -24,5 +45,13 @@
         color: #949494;
         font-size: 17px;
         line-height: 140%;
+
+        @include l-tablet {
+            max-width: unset;
+        }
+
+        @include sm-tablet {
+            font-size: 16px;
+        }
     }
 }

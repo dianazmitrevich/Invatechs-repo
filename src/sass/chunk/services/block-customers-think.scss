@@ -1,6 +1,15 @@
 .customers-think {
-    margin-top: 120px;
-    margin-bottom: 100px;
+    margin-top: 100px;
+    margin-bottom: 80px;
+
+    @include l-tablet {
+        margin-top: 80px;
+    }
+
+    @include sm-tablet {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
 
     .think__title {
         margin-bottom: 25px;
@@ -14,6 +23,10 @@
 
         iframe {
             border: none;
+        }
+
+        @include sm-tablet {
+            height: 440px;
         }
     }
 }

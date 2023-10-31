@@ -27,6 +27,17 @@
         min-height: 300px;
         padding-top: 170px;
         padding-bottom: 70px;
+
+        @include l-tablet {
+            padding-top: 140px;
+            padding-bottom: 50px;
+            min-height: unset;
+        }
+
+        @include sm-tablet {
+            padding-top: 120px;
+            padding-bottom: 40px;
+        }
     }
 
     .banner__title {
@@ -43,16 +54,28 @@
         line-height: 25.2px;
         max-width: 800px;
         margin-top: 20px;
+
+        @include l-tablet {
+            margin-top: 15px;
+            font-size: 16px;
+            line-height: 140%;
+        }
+
+        @include sm-tablet {
+            margin-top: 10px;
+        }
     }
 
     .banner__btns {
         margin-top: 25px;
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     .banner__btn {
         margin-right: 20px;
+        margin-bottom: 10px;
 
         &:last-of-type {
             margin-right: 0;
@@ -64,6 +87,10 @@
         flex-wrap: wrap;
         max-width: 900px;
         margin-top: 40px;
+
+        @include sm-tablet {
+            margin-top: 25px;
+        }
     }
 
     .banner__tag {

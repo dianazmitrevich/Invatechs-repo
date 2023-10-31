@@ -16,17 +16,46 @@
 
         .title-wrap {
             margin-bottom: 60px;
+
+            @include l-tablet {
+                margin-bottom: 40px;
+            }
+
+            @include sm-tablet {
+                margin-bottom: 25px;
+            }
+
+            .numbers__title {
+                @include l-tablet {
+                    margin-bottom: 25px;
+                }
+
+                @include sm-tablet {
+                    margin-bottom: 15px;
+                }
+            }
         }
     }
 
     .numbers__items {
         display: flex;
         justify-content: space-between;
+
+        @include sm-tablet {
+            flex-direction: column;
+        }
     }
 
     .numbers__item {
         width: calc(100% / 3);
         text-align: center;
+
+        @include sm-tablet {
+            width: 100%;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
     }
 
     .numbers__item-num {
@@ -36,12 +65,20 @@
         letter-spacing: -4.5px;
         font-family: $font-family-ubuntu;
         color: $accent-color;
+
+        @include sm-tablet {
+            width: 150px;
+        }
     }
 
     .numbers__item-text {
-        font-size: 24px;
+        font-size: 2.4rem;
         font-family: $font-family-ubuntu;
         line-height: normal;
         letter-spacing: 0.24px;
+
+        @include sm-tablet {
+            font-size: 3rem;
+        }
     }
 }

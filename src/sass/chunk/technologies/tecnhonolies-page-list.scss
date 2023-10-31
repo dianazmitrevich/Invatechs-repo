@@ -3,6 +3,16 @@
         padding-top: 80px;
         padding-bottom: 80px;
 
+        @include l-tablet {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        @include sm-tablet {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
         &:nth-of-type(2n-1) {
             background: $light-main-color;
         }
@@ -14,15 +24,33 @@
         .item__wrapper {
             display: flex;
             justify-content: space-between;
+
+            @include sm-tablet {
+                flex-direction: column;
+            }
         }
 
         .item__col-text {
             max-width: 440px;
+            font-size: 16px;
+
+            @include l-tablet {
+                max-width: 350px;
+            }
+
+            @include sm-tablet {
+                max-width: unset;
+            }
         }
 
         .item__col-icons {
             width: 40%;
             margin-top: 59px;
+
+            @include sm-tablet {
+                margin-top: 30px;
+                width: 100%;
+            }
 
             .icons__wrapper {
                 display: flex;
@@ -37,12 +65,33 @@
                 align-items: center;
             }
 
+            .icons__item-image {
+                width: 35px;
+                height: 35px;
+                overflow: hidden;
+
+                @include l-tablet {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
             .icons__item-text {
                 font-family: $font-family-ubuntu;
                 margin-left: 20px;
                 font-size: 20px;
                 font-weight: 700;
                 line-height: 140%;
+
+                @include l-tablet {
+                    font-size: 16px;
+                    margin-left: 10px;
+                }
             }
         }
 

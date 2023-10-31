@@ -2,10 +2,27 @@
     .positions__wrapper {
         padding-top: 100px;
         padding-bottom: 80px;
+
+        @include l-tablet {
+            padding-top: 80px;
+        }
+
+        @include sm-tablet {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
     }
 
     .positions__title {
         padding-bottom: 80px;
+
+        @include l-tablet {
+            padding-bottom: 60px;
+        }
+
+        @include sm-tablet {
+            padding-bottom: 40px;
+        }
     }
 
     .positions__item {
@@ -16,6 +33,10 @@
         justify-content: space-between;
         padding-bottom: 40px;
 
+        @include sm-tablet {
+            flex-direction: column;
+        }
+
         &:first-of-type {
             margin-bottom: 40px !important;
             padding-bottom: 40px !important;
@@ -23,7 +44,10 @@
 
         &:last-of-type {
             margin-bottom: 0;
-            padding-bottom: 0;
+        }
+
+        .item__col:first-of-type {
+            margin-right: 40px;
         }
 
         .item__col-title {
@@ -31,6 +55,10 @@
             font-size: 24px;
             line-height: 110%;
             margin-bottom: 20px;
+
+            @include sm-tablet {
+                font-size: 20px;
+            }
         }
 
         .item__col-text {
@@ -46,6 +74,12 @@
             letter-spacing: 1.6px;
             padding: 18px 66px;
             display: block;
+            white-space: nowrap;
+            width: fit-content;
+
+            @include sm-tablet {
+                margin-top: 25px;
+            }
         }
     }
 }

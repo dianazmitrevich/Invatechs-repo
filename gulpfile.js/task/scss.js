@@ -11,7 +11,7 @@ const scss = () => {
       }))
       .pipe($.gp.sassGlob())
       .pipe(sass())
-      .pipe($.gp.webpCss())
+      // .pipe($.gp.webpCss())
       .pipe($.gp.autoprefixer())
       .pipe($.gp.shorthand())
       .pipe($.gp.groupCssMediaQueries())

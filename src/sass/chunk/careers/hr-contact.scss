@@ -1,18 +1,40 @@
 .hr-contact {
     .contact__wrapper {
         display: flex;
+
+        @include sm-tablet {
+            flex-direction: column;
+        }
     }
 
     .contact__col-btns {
         width: 60%;
+
+        @include l-tablet {
+            width: 50%;
+            margin-right: 40px;
+        }
+
+        @include sm-tablet {
+            width: 100%;
+            margin-bottom: 40px;
+        }
     }
 
     .contact__col-links {
         width: 40px;
+
+        @include sm-tablet {
+            width: 100%;
+        }
     }
 
     .contact__title {
         margin-bottom: 25px;
+
+        @include sm-tablet {
+            margin-bottom: 15px;
+        }
     }
 
     .contact__subtitle {
@@ -21,6 +43,10 @@
         max-width: 380px;
         margin-bottom: 30px;
 
+        @include sm-tablet {
+            max-width: unset;
+        }
+
         a {
             color: $accent-color;
         }
@@ -28,9 +54,13 @@
 
     .contact__col-hr {
         .hr__title {
-            font-size: 32px;
+            font-size: 3.2rem;
             line-height: 140%;
             font-family: $font-family-ubuntu;
+
+            @include sm-tablet {
+                font-size: 24px;
+            }
         }
 
         .hr__position {
@@ -51,18 +81,10 @@
                 }
             }
 
-            picture {
+            img {
                 width: 34px;
                 height: 34px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 margin-right: 15px;
-
-                img {
-                    width: 100%;
-                    height: auto;
-                }
             }
 
             a {

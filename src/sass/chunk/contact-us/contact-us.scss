@@ -12,19 +12,38 @@
         background-size: cover;
         top: 0;
         left: 0;
+
+        @include l-tablet {
+            opacity: .3;
+        }
     }
 
     .contact__wrapper {
         padding-top: 170px;
-        padding-bottom: 120px;
+        padding-bottom: 100px;
         display: flex;
         font-size: 18px;
         line-height: 140%;
         justify-content: space-between;
+
+        @include l-tablet {
+            padding-top: 150px;
+            padding-bottom: 80px;
+            flex-direction: column;
+        }
+
+        @include sm-tablet {
+            padding-top: 130px;
+            padding-bottom: 60px;
+        }
     }
 
     .contact__col-text {
         max-width: 300px;
+
+        @include l-tablet {
+            max-width: unset;
+        }
 
         p {
             margin-bottom: 10px;
@@ -48,6 +67,11 @@
         height: auto;
         padding: 30px 40px;
         margin-right: 150px;
+
+        @include desktop {
+            margin-right: 0;
+            margin-top: 40px;
+        }
     }
 
     .contact__title {
@@ -57,10 +81,27 @@
         font-family: $font-family-ubuntu;
         margin-bottom: 20px;
         margin-top: 50px;
+
+        @include l-tablet {
+            margin-top: 0;
+        }
+
+        @include sm-tablet {
+            margin-bottom: 15px;
+        }
     }
 
     .contact__subtitle {
         margin-bottom: 50px;
+
+        @include l-tablet {
+            max-width: 50%;
+        }
+
+        @include sm-tablet {
+            max-width: unset;
+            margin-bottom: 30px;
+        }
     }
 
     .contact__form {

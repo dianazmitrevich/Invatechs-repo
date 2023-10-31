@@ -1,16 +1,31 @@
 .stack-icons {
     .stack__wrapper {
-        padding-top: 120px;
-        padding-bottom: 120px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        @include l-tablet {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        @include sm-tablet {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
     }
 
     .stack__title {
         margin-bottom: 40px;
+
+        @include l-tablet {
+            margin-bottom: 25px;
+        }
     }
 
     .stack__cards {
         display: flex;
         width: 100%;
+        flex-wrap: wrap;
     }
 
     .stack__card {
@@ -18,6 +33,19 @@
         border: 1px solid #222;
         border-left: 0;
         padding: 40px;
+
+        @include l-tablet {
+            width: calc(50%);
+            border: .5px solid #222;
+        }
+
+        @include sm-tablet {
+            padding: 25px;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
 
         &:first-of-type {
             border-left: 1px solid #222;
@@ -27,18 +55,18 @@
             width: 50%;
             height: 50px;
             margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
 
-            picture {
-                width: 100%;
+            img {
                 height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
+                width: auto;
+            }
 
-                img {
-                    height: 100%;
-                    width: auto;
-                }
+            @include sm-tablet {
+                height: 30px;
+                margin-bottom: 15px;
             }
         }
 
@@ -48,6 +76,11 @@
             font-weight: 700;
             line-height: 140%;
             margin-bottom: 25px;
+
+            @include sm-tablet {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
         }
 
         .card__item {
@@ -55,6 +88,11 @@
             display: flex;
             align-items: center;
             margin-bottom: 20px;
+            font-size: 16px;
+
+            @include sm-tablet {
+                margin-bottom: 10px;
+            }
 
             &:last-of-type {
                 margin-bottom: 0;
@@ -65,18 +103,13 @@
             width: 30px;
             height: 30px;
             margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-            picture {
-                width: 100%;
+            img {
                 height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                img {
-                    height: 100%;
-                    width: auto;
-                }
+                width: auto;
             }
         }
     }

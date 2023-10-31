@@ -4,30 +4,64 @@
     .project__wrapper {
         padding-top: 100px;
         padding-bottom: 80px;
+
+        @include l-tablet {
+            padding-top: 80px;
+            padding-bottom: 0;
+        }
+
+        @include sm-tablet {
+            padding-top: 60px;
+            padding-bottom: 0;
+        }
     }
 
     .project__title {
         margin-bottom: 25px;
+
+        @include sm-tablet {
+            margin-bottom: 15px;
+        }
     }
 
     .project__subtitle {
         max-width: 880px;
         font-size: 18px;
         line-height: 140%;
+
+        @include sm-tablet {
+            font-size: 16px;
+        }
     }
 
     .project__row {
         display: flex;
         margin-top: 30px;
+        position: relative;
     }
 
     .project__col-image {
         min-width: 770px;
         max-width: 770px;
-        height: 989px;
+        height: auto;
         overflow: hidden;
         position: relative;
         background: #777981;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 770/988;
+
+        @include desktop {
+            position: absolute;
+            left: -18%;
+        }
+
+        @include l-tablet {
+            z-index: 99;
+            opacity: .2;
+            left: 0;
+            display: none;
+        }
 
         .image-fill {
             position: absolute;
@@ -36,44 +70,69 @@
             background: $accent-color;
             top: -100%;
             left: 0;
+            z-index: 99;
         }
 
-        picture {
+        img {
             width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height: auto;
             z-index: 9999;
             position: relative;
-
-            img {
-                width: 100%;
-                height: auto;
-            }
         }
     }
 
     .project__col-texts {
         padding-top: 70px;
 
+        @include desktop {
+            margin-left: 55%;
+        }
+
+        @include l-tablet {
+            margin-left: 0;
+            padding-top: 60px;
+        }
+
+        @include sm-tablet {
+            padding-top: 40px;
+        }
+
         .text-wrap {
             margin-bottom: 25px;
 
+            @include l-tablet {
+                border-bottom: 1px solid $accent-color;
+                padding-bottom: 25px;
+            }
+
             &:last-of-type {
                 margin-bottom: 0;
+
+                @include l-tablet {
+                    border-bottom: 0;
+                    padding-bottom: 0;
+                }
             }
 
             .title {
                 font-family: $font-family-ubuntu;
                 font-size: 24px;
                 line-height: 140%;
+                font-weight: 700;
                 margin-bottom: 8px;
+
+                @include sm-tablet {
+                    font-size: 20px;
+                }
             }
 
             .text {
                 font-size: 18px;
                 line-height: 140%;
+
+                @include sm-tablet {
+                    font-size: 16px;
+                }
             }
         }
     }

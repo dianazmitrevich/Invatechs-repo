@@ -4,21 +4,50 @@
         padding-bottom: 80px;
         display: flex;
         justify-content: space-between;
+
+        @include l-tablet {
+            margin-top: 80px;
+            flex-direction: column;
+        }
+
+        @include sm-tablet {
+            margin-top: 60px;
+            padding-bottom: 60px;
+        }
     }
 
     .workflow__col-text {
         max-width: 420px;
+
+        @include desktop {
+            max-width: 380px;
+            margin-right: 40px;
+        }
+
+        @include l-tablet {
+            max-width: unset;
+            margin-bottom: 40px;
+        }
     }
 
     .workflow__subtitle {
         font-size: 18px;
         line-height: 140%;
         margin-top: 25px;
+
+        @include sm-tablet {
+            margin-top: 20px;
+        }
     }
 
     .workflow__col-icons {
         width: 580px;
         margin-right: 140px;
+
+        @include l-tablet {
+            width: 100%;
+            margin-right: 0;
+        }
     }
 
     .workflow__col-item {
@@ -28,24 +57,33 @@
         border-bottom: 1px solid #E8E6E6;
         margin-bottom: 30px;
 
+        @include l-tablet {
+            padding-left: 0;
+        }
+
+        @include sm-tablet {
+            flex-direction: column;
+        }
+
         &:last-of-type {
             margin-bottom: 0;
         }
 
         .icon-wrap {
             min-width: 200px;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
 
-            picture {
+            @include sm-tablet {
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+            img {
                 width: 49px;
                 height: 49px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                img {
-                    width: 100%;
-                    height: auto;
-                }
             }
         }
 
@@ -54,12 +92,23 @@
             font-weight: 700;
             line-height: 140%;
             margin-bottom: 20px;
+
+            @include sm-tablet {
+                font-size: 20px;
+                margin-bottom: 0;
+                margin-right: 20px;
+            }
         }
 
         .item__text {
             padding-left: 20px;
             font-size: 17px;
             line-height: 140%;
+
+            @include sm-tablet {
+                padding-left: 0;
+                font-size: 16px;
+            }
         }
     }
 }

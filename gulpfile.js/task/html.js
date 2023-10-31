@@ -8,7 +8,7 @@ const html = () => {
          }))
       }))
       .pipe($.gp.fileInclude())
-      .pipe($.gp.webpHtml())
+      // .pipe($.gp.webpHtml())
       .pipe($.gp.size({ title: "До сжатия" }))
       .pipe($.gp.htmlmin($.app.htmlmin))
       .pipe($.gp.size({ title: "После сжатия" }))

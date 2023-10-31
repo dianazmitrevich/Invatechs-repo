@@ -224,6 +224,7 @@ a {
    line-height: 200%;
    color: $dark-main-color;
    width: fit-content;
+   white-space: nowrap;
 }
 
 .main-tr-btn {
@@ -233,6 +234,11 @@ a {
    color: $dark-main-color;
    border: 1px solid $dark-main-color;
    width: fit-content;
+   white-space: nowrap;
+
+   @include sm-tablet {
+      padding: 5px 40px;
+   }
 }
 
 .main-cta {
@@ -241,6 +247,7 @@ a {
    padding-right: 40px;
    position: relative;
    width: fit-content;
+   white-space: nowrap;
    white-space: nowrap;
 
    &::after {
@@ -263,6 +270,7 @@ a {
    width: fit-content;
    color: $dark-main-color;
    position: relative;
+   white-space: nowrap;
 
    &::after {
       position: absolute;
@@ -284,6 +292,7 @@ a {
    color: $dark-main-color;
    border: 1px solid $dark-main-color;
    position: relative;
+   white-space: nowrap;
 
    &::after {
       position: absolute;

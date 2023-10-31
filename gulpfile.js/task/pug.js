@@ -8,7 +8,7 @@ const pug = () => {
          }))
       }))
       .pipe($.gp.pug($.app.pug))
-      .pipe($.gp.webpHtml())
+      // .pipe($.gp.webpHtml())
       .pipe($.gulp.dest($.path.pug.dest))
 }
 

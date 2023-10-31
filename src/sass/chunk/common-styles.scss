@@ -65,21 +65,47 @@
     .wrapper {
         padding-top: 70px;
         padding-bottom: 70px;
+
+        @include sm-tablet {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
     }
 
     .title-wrap {
         display: flex;
         justify-content: space-between;
 
+        @include l-tablet {
+            flex-direction: column;
+        }
+
+        .title {
+            @include l-tablet {
+                margin-bottom: 25px;
+            }
+
+            @include sm-tablet {
+                margin-bottom: 15px;
+            }
+        }
+
         .text {
             max-width: 600px;
             font-size: 18px;
             line-height: 140%;
+
+            @include sm-tablet {
+                font-size: 16px;
+            }
         }
     }
 }
 
 .block-billet {
+    padding-left: 20px;
+    padding-right: 20px;
+
     .billet__wrapper {
         margin-top: 70px;
         margin-bottom: 70px;
@@ -91,6 +117,17 @@
         flex-direction: column;
         justify-content: center;
         overflow: hidden;
+
+        @include l-tablet {
+            padding: 50px 65px;
+            min-height: unset;
+        }
+
+        @include sm-tablet {
+            margin-top: 60px;
+            margin-bottom: 60px;
+            padding: 40px 55px;
+        }
 
         &:before {
             position: absolute;
@@ -128,7 +165,7 @@
 
 .accordion-arrow {
     position: absolute;
-    top: 5px;
+    top: 9px;
     right: 0;
     transition: all .25s ease-in-out;
 }
